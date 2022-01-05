@@ -1,4 +1,4 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project helps to create an Image Libary using React and AWS Appsync
 
 ## Available Scripts
 
