@@ -1,0 +1,14 @@
+{
+    "CreateAPIKey": 0,
+    "AppSyncApiName": "jewellerapp",
+    "DynamoDBBillingMode": "PAY_PER_REQUEST",
+    "DynamoDBEnableServerSideEncryption": false,
+    "AuthCognitoUserPoolId": {
+        "Fn::GetAtt": [
+            "authauthmfa",
+            "Outputs.UserPoolId"
+        ]
+    },
+    "S3DeploymentBucket": "amplify-authmfa-devgs-115246-deployment",
+    "S3DeploymentRootKey": "amplify-appsync-files/f3609129b64d8ec84af1d2e4fdd14e8584e42d5f"
+}

@@ -1,0 +1,79 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-authmfa-devgs-115246-authRole",
+      "UnauthRoleArn": "arn:aws:iam::158348200448:role/amplify-authmfa-devgs-115246-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::158348200448:role/amplify-authmfa-devgs-115246-authRole",
+      "Region": "ap-south-1",
+      "DeploymentBucketName": "amplify-authmfa-devgs-115246-deployment",
+      "UnauthRoleName": "amplify-authmfa-devgs-115246-unauthRole",
+      "StackName": "amplify-authmfa-devgs-115246",
+      "StackId": "arn:aws:cloudformation:ap-south-1:158348200448:stack/amplify-authmfa-devgs-115246/b87313c0-fb35-11eb-8b4b-0603020fe79e",
+      "AmplifyAppId": "d35vo8grklunhc"
+    }
+  },
+  "auth": {
+    "authmfa": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false,
+      "output": {
+        "CreatedSNSRole": "arn:aws:iam::158348200448:role/sns741d078a115246-devgs",
+        "UserPoolId": "ap-south-1_wrGgO8XUQ",
+        "AppClientIDWeb": "bjp3lkmi6ulkpdgjpb5l9dpbl",
+        "AppClientID": "1e3925e1l33ln5ssiopk8ajnib",
+        "IdentityPoolId": "ap-south-1:c9667a20-c92d-4702-8806-5a64b8919b07",
+        "UserPoolArn": "arn:aws:cognito-idp:ap-south-1:158348200448:userpool/ap-south-1_wrGgO8XUQ",
+        "IdentityPoolName": "authmfauser__devgs",
+        "UserPoolName": "authmfa741d078a_userpool_741d078a"
+      },
+      "lastPushTimeStamp": "2021-09-10T11:16:48.752Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-authmfa-devgs-115246-deployment/amplify-cfn-templates/auth/authmfa-cloudformation-template.yml",
+        "logicalId": "authauthmfa"
+      }
+    }
+  },
+  "api": {
+    "jewellerapp": {
+      "service": "AppSync",
+      "providerPlugin": "awscloudformation",
+      "output": {
+        "authConfig": {
+          "defaultAuthentication": {
+            "authenticationType": "AMAZON_COGNITO_USER_POOLS",
+            "userPoolConfig": {
+              "userPoolId": "authauthmfa"
+            }
+          },
+          "additionalAuthenticationProviders": []
+        },
+        "GraphQLAPIIdOutput": "uiceaiym5va4reooyinl44bh2y",
+        "GraphQLAPIEndpointOutput": "https://isqorycnxjbhpo2k6orjloplt4.appsync-api.ap-south-1.amazonaws.com/graphql"
+      },
+      "lastPushTimeStamp": "2021-09-10T11:16:48.754Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-authmfa-devgs-115246-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+        "logicalId": "apijewellerapp"
+      },
+      "lastPushDirHash": "iLFOdMhTNOdVHPIIz9JS5L2z+yI="
+    }
+  },
+  "storage": {
+    "storelogo": {
+      "service": "S3",
+      "providerPlugin": "awscloudformation",
+      "output": {
+        "BucketName": "gsstorelogo115246-devgs",
+        "Region": "ap-south-1"
+      },
+      "lastPushTimeStamp": "2021-09-10T11:16:48.755Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-authmfa-devgs-115246-deployment/amplify-cfn-templates/storage/s3-cloudformation-template.json",
+        "logicalId": "storagestorelogo"
+      }
+    }
+  },
+  "function": {}
+}
