@@ -1,4 +1,4 @@
-This project helps to create an Image Libary using React and AWS Appsync
+This project helps to create an Image Libary using React, Amplify and AWS Appsync 
 
 ## Available Scripts
 
