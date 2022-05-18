@@ -78,6 +78,8 @@ function HomePage(props) {
       })
     );
   };
+  
+  const getImages = async (imageList) => {}
 
   const getOneFormatedImage = async (image) => {
     return {
